@@ -1,0 +1,61 @@
+#container {
+
+background-color: #FFFFFF;
+  position: absolute;
+  left: 10;
+  right: 10;
+  top: 40%;
+  margin: 5%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+container{
+
+}
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  --color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+
+.page-content {
+  padding: 16px; /* Optional padding for content */
+  font-size: 16px; /* Optional text styling */
+}
+
+ion-content {
+  --background: #FFFFFF; /* Set the Ionic background */
+  --color: #8c8c8c;
+}
+.custom-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+
+  li {
+    padding: 12px; /* Add padding for better spacing */
+    margin-bottom: 8px; /* Space between list items */
+    background-color: #f9f9f9; /* Light background color for each item */
+    border-radius: 8px; /* Rounded corners */
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+
+    &:hover {
+      background-color: #e0e0e0; /* Slightly darker background on hover */
+    }
+  }
+}
