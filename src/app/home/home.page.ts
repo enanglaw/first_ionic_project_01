@@ -9,23 +9,23 @@ import { Subscription } from 'rxjs';
   standalone: false,
 })
 export class HomePage implements OnInit, OnDestroy {
-    personSub!:Subscription;
-    personList:any[]=[];
-  constructor(private personService:ApiService) {}
-  ngOnDestroy(){
+  personSub!: Subscription;
+  personList: any[] = [];
+  text: string = 'Original Text';
+  constructor(private personService: ApiService) {}
+  ngOnDestroy() {
     this.personSub.unsubscribe();
   }
 
   ngOnInit() {
-   
-   this.personSub=this.personService.personChanged.subscribe((res)=>{
-     this.personList=res;
-     console.log('thanks!')
-     console.log(this.personList)
-   })
-   this.personService.getData()
+    this.personSub = this.personService.personChanged.subscribe((res) => {
+      this.personList = res;
+      console.log('thanks!');
+      console.log(this.personList);
+    });
+    this.personService.getData();
   }
-
-
-
+  onChangeText() {
+    this.text = 'text changed';
+  }
 }
